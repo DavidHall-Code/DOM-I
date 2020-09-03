@@ -95,3 +95,15 @@ let headerImg = document.getElementById("cta-img");
   navBar[3].style.color = "green";
   navBar[4].style.color = "green";
   
+
+  const newAnchor = document.createElement("a");
+  newAnchor.href = "https://github.com/DavidHall-Code";
+  newAnchor.textContent = "David M Hall";
+  newAnchor.style.color = "green";
+  const navigation = document.querySelector('nav');
+  navigation.prepend(newAnchor);
+  const buttonInTheNav = document.createElement('button');
+  buttonInTheNav.textContent = "Dont Touch!";
+  buttonInTheNav.style.color = "yellow";
+  buttonInTheNav.style.background = "blue";
+  navigation.appendChild(buttonInTheNav);
