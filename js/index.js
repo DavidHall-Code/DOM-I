@@ -95,7 +95,7 @@ let headerImg = document.getElementById("cta-img");
   navBar[3].style.color = "green";
   navBar[4].style.color = "green";
   
-
+  // Added new link and a button to page
   const newAnchor = document.createElement("a");
   newAnchor.href = "https://github.com/DavidHall-Code";
   newAnchor.textContent = "David M Hall";
