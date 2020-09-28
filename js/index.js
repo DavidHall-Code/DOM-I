@@ -42,12 +42,12 @@ let logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let headerImg = document.getElementById("cta-img")
-  headerImg.src = siteContent["cta"]["img-src"]
+  headerImg.src = siteContent ["cta"]["img-src"]
   
   const header = document.querySelector('h1')
   
   // header.innerHTML = "Dom{0} is{1} awesome{2}";
-  const splitThis = siteContent["cta"]["h1"].split(' ')
+  const splitThis = siteContent ["cta"]["h1"].split(' ')
   header.innerHTML = splitThis[0] + "<br>" + splitThis[1] + "<br>" + splitThis[2]
 
   // "Get Started" button
@@ -56,22 +56,73 @@ let headerImg = document.getElementById("cta-img")
 
   // Middle Image
   const middleImg = document.getElementById('middle-img')
-  middleImg.src = siteContent["main-content"]["middle-img-src"]
+  middleImg.src = siteContent ["main-content"]["middle-img-src"]
   
   // Descriptions 
   const para = document.querySelectorAll('p')
 
   // Features content
-  para[0].textContent = siteContent["main-content"]["features-content"]
+  para[0].textContent = siteContent ["main-content"]["features-content"]
   
   // About content
-  para[1].textContent = siteContent["main-content"]["about-content"]
+  para[1].textContent = siteContent ["main-content"]["about-content"]
 
   // Services content
-  para[2].textContent = siteContent["main-content"]["services-content"]
+  para[2].textContent = siteContent ["main-content"]["services-content"]
 
   //  Product content
-  para[3].textContent = siteContent["main-content"]["product-content"]
+  para[3].textContent = siteContent ["main-content"]["product-content"]
 
   // Vision content
-  para[4].textContent = siteContent["main-content"]["vision-content"]
+  para[4].textContent = siteContent ["main-content"]["vision-content"]
+
+  // para[5] .innerHTML = address
+  const split = siteContent ["contact"]["address"].split ("")
+  para[5].innerHTML = split[0] + split[1] + split[2] +split[3] + "<br>" + split[4] + split[5]
+
+  // Phone Number
+  para[6].textContent = siteContent ["contact"]["phone"]
+
+  // Email
+  para[7].textContent = siteContent ["contact"]["email"]
+
+  // Copyright
+  para[8].textContent = siteContent ["footer"]["copyright"]; "Copyright Great Idea! 2018"
+
+  // Features style
+  const forthHeader = document.querySelectorAll('h4')
+
+  forthHeader[0].textContent = siteContent["main-content"]["features-h4"]
+  forthHeader[1].textContent = siteContent["main-content"]["about-h4"]
+  forthHeader[2].textContent = siteContent["main-content"]["services-h4"]
+  forthHeader[3].textContent = siteContent["main-content"]["product-h4"]
+  forthHeader[4].textContent = siteContent["main-content"]["vision-h4"]
+  forthHeader[5].textContent = siteContent["contact"]["contact-h4"]
+
+ // Changeing Nav text to green
+  const navBar = document.querySelectorAll('a');
+  navBar[0].textContent = siteContent["nav"]["nav-item-1"];
+  navBar[1].textContent = siteContent["nav"]["nav-item-2"];
+  navBar[2].textContent = siteContent["nav"]["nav-item-3"];
+  navBar[3].textContent = siteContent["nav"]["nav-item-4"];
+  navBar[4].textContent = siteContent["nav"]["nav-item-5"];
+  navBar[0].style.color = "green";
+  navBar[1].style.color = "green";
+  navBar[2].style.color = "green";
+  navBar[3].style.color = "green";
+  navBar[4].style.color = "green";
+
+  // Add new link 
+  const newAnchor = document.createElement("a")
+  newAnchor.href = "https://github.com/DavidHall-Code"
+  newAnchor.textContent = "David M Hall"
+  newAnchor.style.color = "royalblue"
+  
+  // Added Button
+  const navigation = document.querySelector('nav')
+  navigation.prepend(newAnchor);
+  const buttonInTheNav = document.createElement('button')
+  buttonInTheNav.textContent = "Dont Touch!"
+  buttonInTheNav.style.color = "yellow"
+  buttonInTheNav.style.background = "blue"
+  navigation.appendChild(buttonInTheNav)
