@@ -38,5 +38,40 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImg = document.getElementById("cta-img")
+  headerImg.src = siteContent["cta"]["img-src"]
+  
+  const header = document.querySelector('h1')
+  
+  // header.innerHTML = "Dom{0} is{1} awesome{2}";
+  const splitThis = siteContent["cta"]["h1"].split(' ')
+  header.innerHTML = splitThis[0] + "<br>" + splitThis[1] + "<br>" + splitThis[2]
+
+  // "Get Started" button
+  const headerButton = document.querySelector('button')
+  headerButton.textContent = siteContent ["cta"]["button"] 
+
+  // Middle Image
+  const middleImg = document.getElementById('middle-img')
+  middleImg.src = siteContent["main-content"]["middle-img-src"]
+  
+  // Descriptions 
+  const para = document.querySelectorAll('p')
+
+  // Features content
+  para[0].textContent = siteContent["main-content"]["features-content"]
+  
+  // About content
+  para[1].textContent = siteContent["main-content"]["about-content"]
+
+  // Services content
+  para[2].textContent = siteContent["main-content"]["services-content"]
+
+  //  Product content
+  para[3].textContent = siteContent["main-content"]["product-content"]
+
+  // Vision content
+  para[4].textContent = siteContent["main-content"]["vision-content"]
